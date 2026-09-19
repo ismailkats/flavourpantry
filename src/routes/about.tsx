@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Heart, MessageCircle } from "lucide-react";
 
-import storyAsset from "@/assets/our-story.jpg.asset.json";
+import storyPastriesAsset from "@/assets/story-pastries.png.asset.json";
+import storySavouryAsset from "@/assets/story-savoury.png.asset.json";
 import { SiteFooter, SiteHeader, waLink } from "@/components/site-shell";
 
 export const Route = createFileRoute("/about")({
@@ -37,9 +38,12 @@ function AboutPage() {
               <p className="mt-5 text-muted-foreground md:text-lg">Orders are baked fresh daily — fancy cakes for tea trays, bento cakes for birthdays, trays of samoosas and pies for Ramadhaan, and combo packages for matric farewells. Nothing sits on a shelf.</p>
               <p className="mt-5 text-muted-foreground md:text-lg">We use fresh, premium-quality halaal ingredients, keep our batches small, and treat every order like it is going to our own table.</p>
               <p className="mt-7 flex items-center gap-2 font-semibold text-primary"><Heart className="h-5 w-5" />Homemade with love</p>
-              <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />WhatsApp Us</a>
+            <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />WhatsApp Us</a>
             </div>
-            <img src={storyAsset.url} alt="The story of Flavour Pantry GQ with sweet and savoury platters" className="w-full rounded-2xl border border-border shadow-lg" />
+            <div className="grid gap-4 sm:grid-cols-2">
+              <img src={storyPastriesAsset.url} alt="Sweet pastries and fancy cakes from Flavour Pantry GQ" className="w-full rounded-2xl border border-border shadow-lg" />
+              <img src={storySavouryAsset.url} alt="Halaal savoury samoosas and pies from Flavour Pantry GQ" className="w-full rounded-2xl border border-border shadow-lg" />
+            </div>
           </div>
         </section>
       </main>

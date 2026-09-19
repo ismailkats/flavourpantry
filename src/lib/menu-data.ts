@@ -1,10 +1,10 @@
 import bentoCake from "@/assets/bento_cake.jpg";
 import blueCupcakes from "@/assets/blue_cupcakes.jpg";
 import bundt from "@/assets/bundt.jpg";
-import fancyCakes from "@/assets/fancy_cakes.jpg";
 import savouries from "@/assets/savouries.jpg";
 import cheesecakesAsset from "@/assets/cheesecakes.jpg.asset.json";
 import dessertsAsset from "@/assets/desserts.jpg.asset.json";
+import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg.asset.json";
 import pieAsset from "@/assets/pie-menu.jpg.asset.json";
 import samoosaAsset from "@/assets/samoosa-menu.jpg.asset.json";
 
@@ -22,7 +22,7 @@ export type MenuSection = {
 export const sweetMenu: MenuSection[] = [
   {
     title: "Fancy Cakes Platter",
-    image: fancyCakes,
+    image: fancyCakesAsset.url,
     alt: "Assorted fancy cakes platter",
     description:
       "A beautiful mixed platter — pastry horns, caramel tarts, chocolate eclairs, lemon curd tarts, granadilla & pineapple tarts, lamingtons, milk tarts, vanilla cupcakes and snow balls.",

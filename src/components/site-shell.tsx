@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Menu, MessageCircle, Music2, X } from "lucide-react";
+import { Facebook, Instagram, Menu, MessageCircle, Twitter, X } from "lucide-react";
 import { useState } from "react";
 
 import logo from "@/assets/logo.png";
@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Home", to: "/" as const },
   { label: "Sweet", to: "/sweet" as const },
   { label: "Savoury", to: "/savoury" as const },
+  { label: "About Us", to: "/about" as const },
 ];
 
 export function SiteHeader() {
@@ -87,6 +88,7 @@ export function SiteFooter() {
           <img src={logo} alt="Flavour Pantry GQ logo" className="h-14 w-auto" />
         </Link>
         <p className="text-sm text-muted-foreground">Where sweet meets savoury · Malabar, Gqeberha</p>
+        <p className="max-w-lg text-sm font-medium text-foreground">Like and follow us on our social media platforms for our latest menus and specials.</p>
         <div className="flex gap-3">
           <a href="https://www.facebook.com/flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Facebook" className="rounded-full bg-accent p-2.5 text-primary">
             <Facebook className="h-4 w-4" />
@@ -94,8 +96,8 @@ export function SiteFooter() {
           <a href="https://www.instagram.com/flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Instagram" className="rounded-full bg-accent p-2.5 text-primary">
             <Instagram className="h-4 w-4" />
           </a>
-          <a href="https://www.tiktok.com/@flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on TikTok" className="rounded-full bg-accent p-2.5 text-primary">
-            <Music2 className="h-4 w-4" />
+          <a href="https://twitter.com/flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Twitter" className="rounded-full bg-accent p-2.5 text-primary">
+            <Twitter className="h-4 w-4" />
           </a>
         </div>
       </div>

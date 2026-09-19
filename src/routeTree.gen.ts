@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SavouryRouteImport } from './routes/savoury'
+import { Route as SweetRouteImport } from './routes/sweet'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SavouryRoute = SavouryRouteImport.update({
+  id: '/savoury',
+  path: '/savoury',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SweetRoute = SweetRouteImport.update({
+  id: '/sweet',
+  path: '/sweet',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/savoury': typeof SavouryRoute
+  '/sweet': typeof SweetRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/savoury': typeof SavouryRoute
+  '/sweet': typeof SweetRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/savoury': typeof SavouryRoute
+  '/sweet': typeof SweetRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/savoury' | '/sweet'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/savoury' | '/sweet'
+  id: '__root__' | '/' | '/savoury' | '/sweet'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SavouryRoute: typeof SavouryRoute
+  SweetRoute: typeof SweetRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/savoury': {
+      id: '/savoury'
+      path: '/savoury'
+      fullPath: '/savoury'
+      preLoaderRoute: typeof SavouryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sweet': {
+      id: '/sweet'
+      path: '/sweet'
+      fullPath: '/sweet'
+      preLoaderRoute: typeof SweetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SavouryRoute: SavouryRoute,
+  SweetRoute: SweetRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -93,7 +93,7 @@ export function SiteFooter() {
           <a href="https://www.facebook.com/flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Facebook" className="rounded-full bg-accent p-2.5 text-primary">
             <Facebook className="h-4 w-4" />
           </a>
-          <a href="https://www.instagram.com/flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Instagram" className="rounded-full bg-accent p-2.5 text-primary">
+          <a href="https://www.instagram.com/jantjiesshumeeze?stkn=MTgwNWt0aDAweTZwaA==" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Instagram" className="rounded-full bg-accent p-2.5 text-primary">
             <Instagram className="h-4 w-4" />
           </a>
           <a href="https://www.tiktok.com/@flavorpantrygq?_r=1&_t=ZS-99s8mWjbldh" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on TikTok" className="rounded-full bg-accent p-2.5 text-primary">

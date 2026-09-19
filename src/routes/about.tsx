@@ -31,19 +31,18 @@ function AboutPage() {
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">Homemade sweet and savoury favourites, prepared with care in Malabar.</p>
           </div>
         </section>
-        <section className="py-16 md:py-20">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="text-muted-foreground md:text-lg">Flavour Pantry GQ started in 2025 in a family kitchen in Malabar, Gqeberha, with a simple idea: proper halaal home baking that tastes like it was made for you, because it was.</p>
-              <p className="mt-5 text-muted-foreground md:text-lg">Orders are baked fresh daily — fancy cakes for tea trays, bento cakes for birthdays, trays of samoosas and pies for Ramadhaan, and combo packages for matric farewells. Nothing sits on a shelf.</p>
-              <p className="mt-5 text-muted-foreground md:text-lg">We use fresh, premium-quality halaal ingredients, keep our batches small, and treat every order like it is going to our own table.</p>
-              <p className="mt-7 flex items-center gap-2 font-semibold text-primary"><Heart className="h-5 w-5" />Homemade with love</p>
+        <section className="relative overflow-hidden py-16 md:py-24">
+          <div aria-hidden="true" className="absolute inset-0 grid grid-cols-2">
+            <img src={storyPastriesAsset.url} alt="" className="h-full w-full object-cover" />
+            <img src={storySavouryAsset.url} alt="" className="h-full w-full object-cover" />
+          </div>
+          <div aria-hidden="true" className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+          <div className="relative mx-auto max-w-3xl px-4 text-center">
+            <p className="text-lg text-muted-foreground">Flavour Pantry GQ started in 2025 in a family kitchen in Malabar, Gqeberha, with a simple idea: proper halaal home baking that tastes like it was made for you, because it was.</p>
+            <p className="mt-5 text-lg text-muted-foreground">Orders are baked fresh daily — fancy cakes for tea trays, bento cakes for birthdays, trays of samoosas and pies for Ramadhaan, and combo packages for matric farewells. Nothing sits on a shelf.</p>
+            <p className="mt-5 text-lg text-muted-foreground">We use fresh, premium-quality halaal ingredients, keep our batches small, and treat every order like it is going to our own table.</p>
+            <p className="mt-7 flex items-center justify-center gap-2 font-semibold text-primary"><Heart className="h-5 w-5" />Homemade with love</p>
             <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />WhatsApp Us</a>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <img src={storyPastriesAsset.url} alt="Sweet pastries and fancy cakes from Flavour Pantry GQ" className="w-full rounded-2xl border border-border shadow-lg" />
-              <img src={storySavouryAsset.url} alt="Halaal savoury samoosas and pies from Flavour Pantry GQ" className="w-full rounded-2xl border border-border shadow-lg" />
-            </div>
           </div>
         </section>
       </main>

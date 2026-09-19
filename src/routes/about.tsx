@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Heart, MessageCircle } from "lucide-react";
 
-import storyPastriesAsset from "@/assets/story-pastries.png.asset.json";
-import storySavouryAsset from "@/assets/story-savoury.png.asset.json";
 import { SiteFooter, SiteHeader, waLink } from "@/components/site-shell";
 
 export const Route = createFileRoute("/about")({
@@ -31,13 +29,8 @@ function AboutPage() {
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-lg">Homemade sweet and savoury favourites, prepared with care in Malabar.</p>
           </div>
         </section>
-        <section className="relative overflow-hidden py-16 md:py-24">
-          <div aria-hidden="true" className="absolute inset-0 grid grid-cols-2">
-            <img src={storyPastriesAsset.url} alt="" className="h-full w-full object-cover" />
-            <img src={storySavouryAsset.url} alt="" className="h-full w-full object-cover" />
-          </div>
-          <div aria-hidden="true" className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-          <div className="relative mx-auto max-w-3xl px-4 text-center">
+        <section className="py-16 md:py-24">
+          <div className="mx-auto max-w-3xl px-4 text-center">
             <p className="text-lg text-muted-foreground">Flavour Pantry GQ started in 2025 in a family kitchen in Malabar, Gqeberha, with a simple idea: proper halaal home baking that tastes like it was made for you, because it was.</p>
             <p className="mt-5 text-lg text-muted-foreground">Orders are baked fresh daily — fancy cakes for tea trays, bento cakes for birthdays, trays of samoosas and pies for Ramadhaan, and combo packages for matric farewells. Nothing sits on a shelf.</p>
             <p className="mt-5 text-lg text-muted-foreground">We use fresh, premium-quality halaal ingredients, keep our batches small, and treat every order like it is going to our own table.</p>

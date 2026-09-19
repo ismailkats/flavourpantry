@@ -10,8 +10,9 @@ import lemonTarts from "@/assets/lemon_tarts.jpg";
 import logo from "@/assets/logo.png";
 import pies from "@/assets/pies.jpg";
 import samoosas from "@/assets/samoosas.jpg";
-import tallCake from "@/assets/tall_cake.jpg";
 import whatsappQr from "@/assets/whatsapp_qr.png";
+import bentoSpecialAsset from "@/assets/eid-bento-cake.jpg.asset.json";
+import matricComboAsset from "@/assets/matric-combo.jpg.asset.json";
 import savouryAsset from "@/assets/savoury.png.asset.json";
 import sweetAsset from "@/assets/sweet.jpg.asset.json";
 import { SiteFooter, SiteHeader, waLink } from "@/components/site-shell";
@@ -86,7 +87,7 @@ function MenuChoices() {
             <img src={sweetAsset.url} alt="Pink mixer decorated with flowers and cupcakes" className="h-72 w-full object-cover object-center" />
             <div className="p-8">
               <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold">Sweet</h3></div>
-              <p className="mt-3 text-muted-foreground">Fancy cake trays, ganache cakes, cupcakes, bento cakes, cheesecakes and classic desserts.</p>
+              <p className="mt-3 text-muted-foreground">Fancy cakes, ganache cakes, cupcakes, bento cakes, cheesecakes and classic desserts.</p>
               <Link to="/sweet" className="btn-primary mt-6">See Sweet Menu</Link>
             </div>
           </article>
@@ -110,12 +111,23 @@ function SpecialPackages() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center"><p className="section-eyebrow">Special Packages</p><h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Celebrate without the fuss</h2></div>
         <div className="grid items-center gap-10 md:grid-cols-2">
-          <img src={tallCake} alt="Matric farewell tall cake" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
+          <img src={matricComboAsset.url} alt="Matric farewell tall cake" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
           <div>
             <p className="section-eyebrow">Matric Farewell</p>
             <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Combo Package — <span className="text-primary">R2850</span></h2>
             <p className="mt-4 text-muted-foreground md:text-lg">1 tall cake · 12 cupcakes · 100 fancy cakes · 10 dozen savouries. Everything you need for the big night, baked fresh and beautifully finished.</p>
             <a href={waLink("Hi Flavour Pantry! I'm interested in the Matric Farewell Combo Package (R2850).")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />Book the Combo</a>
+          </div>
+        </div>
+        <div className="mt-16 grid items-center gap-10 md:grid-cols-2">
+          <div className="md:order-2">
+            <img src={bentoSpecialAsset.url} alt="Eid bento cake decorated as a lamb" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
+          </div>
+          <div className="md:order-1">
+            <p className="section-eyebrow">Eid Special</p>
+            <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Eid Bento Cake — <span className="text-primary">R250</span></h2>
+            <p className="mt-4 text-muted-foreground md:text-lg">A hand-decorated 5-inch bento cake with your choice of flavour and colours, perfect for Eid gatherings and family visits.</p>
+            <a href={waLink("Hi Flavour Pantry! I'm interested in the Eid Bento Cake Special (R250).")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />Order the Eid Bento</a>
           </div>
         </div>
       </div>

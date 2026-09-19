@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as SavouryRouteImport } from './routes/savoury'
 import { Route as SweetRouteImport } from './routes/sweet'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SavouryRoute = SavouryRouteImport.update({
@@ -31,30 +37,34 @@ const SweetRoute = SweetRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/savoury': typeof SavouryRoute
   '/sweet': typeof SweetRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/savoury': typeof SavouryRoute
   '/sweet': typeof SweetRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/savoury': typeof SavouryRoute
   '/sweet': typeof SweetRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/savoury' | '/sweet'
+  fullPaths: '/' | '/about' | '/savoury' | '/sweet'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/savoury' | '/sweet'
-  id: '__root__' | '/' | '/savoury' | '/sweet'
+  to: '/' | '/about' | '/savoury' | '/sweet'
+  id: '__root__' | '/' | '/about' | '/savoury' | '/sweet'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   SavouryRoute: typeof SavouryRoute
   SweetRoute: typeof SweetRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/savoury': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   SavouryRoute: SavouryRoute,
   SweetRoute: SweetRoute,
 }

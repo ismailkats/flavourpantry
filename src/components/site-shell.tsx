@@ -90,7 +90,7 @@ export function SiteFooter() {
         <p className="text-sm text-muted-foreground">Where sweet meets savoury · Malabar, Gqeberha</p>
         <p className="max-w-lg text-sm font-medium text-foreground">Like and follow us on our social media platforms for our latest menus and specials.</p>
         <div className="flex gap-3">
-          <a href="https://www.facebook.com/flavourpantrygq" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Facebook" className="rounded-full bg-accent p-2.5 text-primary">
+          <a href="https://www.facebook.com/share/19USZ4t3z4/" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Facebook" className="rounded-full bg-accent p-2.5 text-primary">
             <Facebook className="h-4 w-4" />
           </a>
           <a href="https://www.instagram.com/jantjiesshumeeze?stkn=MTgwNWt0aDAweTZwaA==" target="_blank" rel="noreferrer" aria-label="Flavour Pantry GQ on Instagram" className="rounded-full bg-accent p-2.5 text-primary">

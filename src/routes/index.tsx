@@ -10,7 +10,6 @@ import lemonTarts from "@/assets/lemon_tarts.jpg";
 import logo from "@/assets/logo.png";
 import pies from "@/assets/pies.jpg";
 import samoosas from "@/assets/samoosas.jpg";
-import tallCake from "@/assets/tall_cake.jpg";
 import whatsappQr from "@/assets/whatsapp_qr.png";
 import bentoSpecialAsset from "@/assets/eid-bento-cake.jpg.asset.json";
 import matricComboAsset from "@/assets/matric-combo.jpg.asset.json";

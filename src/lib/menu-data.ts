@@ -60,8 +60,8 @@ export const sweetMenu: MenuSection[] = [
   },
   {
     title: "Classic Desserts",
-    image: peppermintTart,
-    alt: "Peppermint crisp tart",
+    image: dessertsAsset.url,
+    alt: "Assorted classic dessert cups",
     items: [
       { name: "Peppermint crisp tart", price: "R25" },
       { name: "Trifle", price: "R25" },
@@ -70,8 +70,8 @@ export const sweetMenu: MenuSection[] = [
   },
   {
     title: "Cheesecakes",
-    image: chocCups,
-    alt: "Dessert cups",
+    image: cheesecakesAsset.url,
+    alt: "Assorted mini cheesecakes",
     items: [
       { name: "Blueberry cheesecake", price: "R30" },
       { name: "Strawberry cheesecake", price: "R30" },

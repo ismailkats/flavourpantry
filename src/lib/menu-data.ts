@@ -1,6 +1,5 @@
 import bentoCake from "@/assets/bento_cake.jpg";
 import blueCupcakes from "@/assets/blue_cupcakes.jpg";
-import savouries from "@/assets/savouries.jpg";
 import cadburyAsset from "@/assets/cadbury.jpg.asset.json";
 import cheesecakesAsset from "@/assets/cheesecakes.jpg.asset.json";
 import dessertsAsset from "@/assets/desserts.jpg.asset.json";

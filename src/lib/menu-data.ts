@@ -1,12 +1,13 @@
 import bentoCake from "@/assets/bento_cake.jpg";
 import blueCupcakes from "@/assets/blue_cupcakes.jpg";
-import bundt from "@/assets/bundt.jpg";
 import savouries from "@/assets/savouries.jpg";
+import cadburyAsset from "@/assets/cadbury.jpg.asset.json";
 import cheesecakesAsset from "@/assets/cheesecakes.jpg.asset.json";
 import dessertsAsset from "@/assets/desserts.jpg.asset.json";
 import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg.asset.json";
 import pieAsset from "@/assets/pie-menu.jpg.asset.json";
 import samoosaAsset from "@/assets/samoosa-menu.jpg.asset.json";
+import savouryMenuAsset from "@/assets/savoury-menu.jpg.asset.json";
 
 export type MenuItem = { name: string; price: string };
 
@@ -33,7 +34,7 @@ export const sweetMenu: MenuSection[] = [
   },
   {
     title: "Cadbury Ganache Cakes",
-    image: bundt,
+    image: cadburyAsset.url,
     alt: "Cadbury ganache bundt cake",
     items: [
       { name: "Large Cadbury ganache bundt cake", price: "R300" },
@@ -106,19 +107,12 @@ export const savouryMenu: MenuSection[] = [
   },
   {
     title: "Mini Savouries",
-    image: savouries,
-    alt: "Platter of mini savouries",
+    image: savouryMenuAsset.url,
+    alt: "Platter of mini savouries and heat-and-eat favourites",
     items: [
       { name: "Chicken half moons", price: "R50" },
       { name: "Chicken spring rolls", price: "R65" },
       { name: "Aamili savoury dip 250ml", price: "R45" },
-    ],
-  },
-  {
-    title: "Heat & Eat",
-    image: savouries,
-    alt: "Heat and eat savoury selection",
-    items: [
       { name: "Mini chicken pizza", price: "R60" },
       { name: "Mini steak pizza", price: "R70" },
       { name: "Chicken buns", price: "R80" },

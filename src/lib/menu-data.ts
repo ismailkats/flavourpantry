@@ -63,9 +63,9 @@ export const sweetMenu: MenuSection[] = [
     image: dessertsAsset.url,
     alt: "Assorted classic dessert cups",
     items: [
-      { name: "Peppermint crisp tart", price: "R25" },
-      { name: "Trifle", price: "R25" },
-      { name: "Malva pudding", price: "R25" },
+      { name: "Peppermint crisp tart", price: "R25 each" },
+      { name: "Trifle", price: "R25 each" },
+      { name: "Malva pudding", price: "R25 each" },
     ],
   },
   {

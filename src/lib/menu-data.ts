@@ -47,7 +47,7 @@ export const sweetMenu: MenuSection[] = [
     items: [
       { name: "Carrot cupcakes with cream cheese", price: "R150 per dozen" },
       { name: "Burfee cupcakes with cream", price: "R150 per dozen" },
-      { name: "Vanilla cupcakes", price: "In platters" },
+      { name: "Vanilla cupcakes", price: "R150 per dozen" },
     ],
   },
   {

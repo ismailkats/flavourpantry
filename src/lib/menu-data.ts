@@ -47,7 +47,7 @@ export const sweetMenu: MenuSection[] = [
     items: [
       { name: "Carrot cupcakes with cream cheese", price: "R150 per dozen" },
       { name: "Burfee cupcakes with cream", price: "R150 per dozen" },
-      { name: "Vanilla cupcakes", price: "In platters" },
+      { name: "Vanilla cupcakes", price: "R150 per dozen" },
     ],
   },
   {
@@ -63,9 +63,9 @@ export const sweetMenu: MenuSection[] = [
     image: dessertsAsset.url,
     alt: "Assorted classic dessert cups",
     items: [
-      { name: "Peppermint crisp tart", price: "R25" },
-      { name: "Trifle", price: "R25" },
-      { name: "Malva pudding", price: "R25" },
+      { name: "Peppermint crisp tart", price: "R25 each" },
+      { name: "Trifle", price: "R25 each" },
+      { name: "Malva pudding", price: "R25 each" },
     ],
   },
   {
@@ -73,9 +73,9 @@ export const sweetMenu: MenuSection[] = [
     image: cheesecakesAsset.url,
     alt: "Assorted mini cheesecakes",
     items: [
-      { name: "Blueberry cheesecake", price: "R30" },
-      { name: "Strawberry cheesecake", price: "R30" },
-      { name: "Pineapple cheesecake", price: "R30" },
+      { name: "Blueberry cheesecake", price: "R30 each" },
+      { name: "Strawberry cheesecake", price: "R30 each" },
+      { name: "Pineapple cheesecake", price: "R30 each" },
     ],
   },
 ];
@@ -99,9 +99,9 @@ export const savouryMenu: MenuSection[] = [
     image: pieAsset.url,
     alt: "Golden homemade savoury pies",
     items: [
-      { name: "Creamy chicken", price: "R75" },
-      { name: "Pepper steak", price: "R85" },
-      { name: "Sausage roll", price: "R65" },
+      { name: "Creamy chicken", price: "R75 per dozen" },
+      { name: "Pepper steak", price: "R85 per dozen" },
+      { name: "Sausage roll", price: "R65 per dozen" },
     ],
   },
   {
@@ -109,17 +109,17 @@ export const savouryMenu: MenuSection[] = [
     image: savouryMenuAsset.url,
     alt: "Platter of mini savouries and heat-and-eat favourites",
     items: [
-      { name: "Chicken half moons", price: "R50" },
-      { name: "Chicken spring rolls", price: "R65" },
-      { name: "Aamili savoury dip 250ml", price: "R45" },
-      { name: "Mini chicken pizza", price: "R60" },
-      { name: "Mini steak pizza", price: "R70" },
-      { name: "Chicken buns", price: "R80" },
-      { name: "Steak buns", price: "R85" },
-      { name: "Chicken tikka subs", price: "R85" },
-      { name: "Mini aloo paratha", price: "R45" },
-      { name: "Chicken pittas", price: "R85" },
-      { name: "Chicken & mushroom quiche", price: "R70" },
+      { name: "Chicken half moons", price: "R50 per dozen" },
+      { name: "Chicken spring rolls", price: "R65 per dozen" },
+      { name: "Aamili savoury dip 250ml", price: "R45 per dozen" },
+      { name: "Mini chicken pizza", price: "R60 per dozen" },
+      { name: "Mini steak pizza", price: "R70 per dozen" },
+      { name: "Chicken buns", price: "R80 per dozen" },
+      { name: "Steak buns", price: "R85 per dozen" },
+      { name: "Chicken tikka subs", price: "R85 per dozen" },
+      { name: "Mini aloo paratha", price: "R45 per dozen" },
+      { name: "Chicken pittas", price: "R85 per dozen" },
+      { name: "Chicken & mushroom quiche", price: "R70 per dozen" },
     ],
   },
 ];

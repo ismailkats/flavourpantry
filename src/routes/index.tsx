@@ -58,7 +58,7 @@ function Hero() {
           <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-outline"><MessageCircle className="h-4 w-4" />WhatsApp Us</a>
         </div>
         <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-medium text-accent-foreground">
-          <Check className="h-3.5 w-3.5 text-primary" />Baked fresh daily with premium, highest quality-halaal ingredients
+          <Check className="h-3.5 w-3.5 text-primary" />Freshly baked using halaal premium quality ingredients
         </div>
       </div>
       <div className="relative mx-auto max-w-5xl px-4 pb-14">

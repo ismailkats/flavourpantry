@@ -73,9 +73,9 @@ export const sweetMenu: MenuSection[] = [
     image: cheesecakesAsset.url,
     alt: "Assorted mini cheesecakes",
     items: [
-      { name: "Blueberry cheesecake", price: "R30" },
-      { name: "Strawberry cheesecake", price: "R30" },
-      { name: "Pineapple cheesecake", price: "R30" },
+      { name: "Blueberry cheesecake", price: "R30 each" },
+      { name: "Strawberry cheesecake", price: "R30 each" },
+      { name: "Pineapple cheesecake", price: "R30 each" },
     ],
   },
 ];

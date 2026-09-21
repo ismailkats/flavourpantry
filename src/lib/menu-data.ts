@@ -99,9 +99,9 @@ export const savouryMenu: MenuSection[] = [
     image: pieAsset.url,
     alt: "Golden homemade savoury pies",
     items: [
-      { name: "Creamy chicken", price: "R75" },
-      { name: "Pepper steak", price: "R85" },
-      { name: "Sausage roll", price: "R65" },
+      { name: "Creamy chicken", price: "R75 per dozen" },
+      { name: "Pepper steak", price: "R85 per dozen" },
+      { name: "Sausage roll", price: "R65 per dozen" },
     ],
   },
   {

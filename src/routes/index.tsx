@@ -2,18 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cake, Check, Croissant, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import blueCupcakes from "@/assets/blue_cupcakes.jpg";
-import bundt from "@/assets/bundt.jpg";
 import eclairs from "@/assets/eclairs.jpg";
-import fancyCakes from "@/assets/fancy_cakes.jpg";
 import heroImg from "@/assets/hero.jpg";
 import lemonTarts from "@/assets/lemon_tarts.jpg";
 import logo from "@/assets/logo.png";
 import pies from "@/assets/pies.jpg";
 import samoosas from "@/assets/samoosas.jpg";
 import whatsappQr from "@/assets/whatsapp_qr.png";
+import cadburyClearAsset from "@/assets/cadbury-ganache-clear.jpg.asset.json";
 import bentoSpecialAsset from "@/assets/eid-bento-cake.jpg.asset.json";
+import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg.asset.json";
 import matricComboAsset from "@/assets/matric-combo.jpg.asset.json";
+import miniPizzasAsset from "@/assets/mini-pizzas-gallery.jpg.asset.json";
 import savouryAsset from "@/assets/savoury.png.asset.json";
+import savouryPlatterAsset from "@/assets/savoury-platter-gallery.jpg.asset.json";
+import savouryRoundPlatterAsset from "@/assets/savoury-round-platter-gallery.jpg.asset.json";
 import sweetAsset from "@/assets/sweet.jpg.asset.json";
 import { SiteFooter, SiteHeader, waLink } from "@/components/site-shell";
 
@@ -33,13 +36,16 @@ export const Route = createFileRoute("/")({
 });
 
 const marqueeImages = [
-  { src: fancyCakes, alt: "Assorted fancy cakes platter" },
-  { src: bundt, alt: "Cadbury ganache bundt cake" },
+  { src: fancyCakesAsset.url, alt: "Assorted fancy cakes platter" },
+  { src: cadburyClearAsset.url, alt: "Cadbury ganache bundt cake" },
   { src: blueCupcakes, alt: "Freshly piped cupcakes" },
   { src: lemonTarts, alt: "Lemon curd tarts" },
   { src: eclairs, alt: "Chocolate eclairs" },
   { src: samoosas, alt: "Golden crispy samoosas" },
   { src: pies, alt: "Golden homemade savoury pies" },
+  { src: savouryPlatterAsset.url, alt: "Assorted savoury platter" },
+  { src: miniPizzasAsset.url, alt: "Freshly prepared mini pizzas" },
+  { src: savouryRoundPlatterAsset.url, alt: "Savoury platter with spring rolls and mini pizzas" },
 ];
 
 function Hero() {

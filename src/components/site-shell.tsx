@@ -80,9 +80,23 @@ export function SiteHeader() {
   );
 }
 
+export function FloatingWhatsApp() {
+  return (
+    <a
+      href={waLink("Hi Flavour Pantry! I'd like to place an order.")}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat with Flavour Pantry GQ on WhatsApp"
+      className="fixed right-4 bottom-4 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 md:right-6 md:bottom-6"
+    >
+      <MessageCircle className="h-6 w-6" />
+    </a>
+  );
+}
+
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-background py-8">
+    <footer className="border-t border-border bg-background py-8 pb-24">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-center">
         <Link to="/" aria-label="Flavour Pantry GQ home">
           <img src={logo} alt="Flavour Pantry GQ logo" className="h-14 w-auto" />

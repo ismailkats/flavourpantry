@@ -117,6 +117,7 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
+      <FloatingWhatsApp />
     </footer>
   );
 }

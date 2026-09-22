@@ -119,6 +119,7 @@ export const savouryMenu: MenuSection[] = [
       { name: "Mini aloo paratha", price: "R45 per dozen" },
       { name: "Chicken pittas", price: "R85 per dozen" },
       { name: "Chicken & mushroom quiche", price: "R70 per dozen" },
+      { name: "Aamili savoury dip 250ml", price: "R45" },
     ],
   },
 ];

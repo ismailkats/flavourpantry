@@ -111,7 +111,6 @@ export const savouryMenu: MenuSection[] = [
     items: [
       { name: "Chicken half moons", price: "R50 per dozen" },
       { name: "Chicken spring rolls", price: "R65 per dozen" },
-      { name: "Aamili savoury dip 250ml", price: "R45" },
       { name: "Mini chicken pizza", price: "R60 per dozen" },
       { name: "Mini steak pizza", price: "R70 per dozen" },
       { name: "Chicken buns", price: "R80 per dozen" },
@@ -120,6 +119,7 @@ export const savouryMenu: MenuSection[] = [
       { name: "Mini aloo paratha", price: "R45 per dozen" },
       { name: "Chicken pittas", price: "R85 per dozen" },
       { name: "Chicken & mushroom quiche", price: "R70 per dozen" },
+      { name: "Aamili savoury dip 250ml", price: "R45" },
     ],
   },
 ];

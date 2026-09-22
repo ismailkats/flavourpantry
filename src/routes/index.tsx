@@ -9,15 +9,15 @@ import logo from "@/assets/logo.png";
 import pies from "@/assets/pies.jpg";
 import samoosas from "@/assets/samoosas.jpg";
 import whatsappQr from "@/assets/whatsapp_qr.png";
-import cadburyClearAsset from "@/assets/cadbury-ganache-clear.jpg.asset.json";
-import bentoSpecialAsset from "@/assets/eid-bento-cake.jpg.asset.json";
-import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg.asset.json";
-import matricComboAsset from "@/assets/matric-combo.jpg.asset.json";
-import miniPizzasAsset from "@/assets/mini-pizzas-gallery.jpg.asset.json";
-import savouryAsset from "@/assets/savoury.png.asset.json";
-import savouryPlatterAsset from "@/assets/savoury-platter-gallery.jpg.asset.json";
-import savouryRoundPlatterAsset from "@/assets/savoury-round-platter-gallery.jpg.asset.json";
-import sweetAsset from "@/assets/sweet.jpg.asset.json";
+import cadburyClearAsset from "@/assets/cadbury-ganache-clear.jpg";
+import bentoSpecialAsset from "@/assets/eid-bento-cake.jpg";
+import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg";
+import matricComboAsset from "@/assets/matric-combo.jpg";
+import miniPizzasAsset from "@/assets/mini-pizzas-gallery.jpg";
+import savouryAsset from "@/assets/savoury.png";
+import savouryPlatterAsset from "@/assets/savoury-platter-gallery.jpg";
+import savouryRoundPlatterAsset from "@/assets/savoury-round-platter-gallery.jpg";
+import sweetAsset from "@/assets/sweet.jpg";
 import { SiteFooter, SiteHeader, waLink } from "@/components/site-shell";
 
 export const Route = createFileRoute("/")({
@@ -36,16 +36,16 @@ export const Route = createFileRoute("/")({
 });
 
 const marqueeImages = [
-  { src: fancyCakesAsset.url, alt: "Assorted fancy cakes platter" },
-  { src: cadburyClearAsset.url, alt: "Cadbury ganache bundt cake" },
+  { src: fancyCakesAsset, alt: "Assorted fancy cakes platter" },
+  { src: cadburyClearAsset, alt: "Cadbury ganache bundt cake" },
   { src: blueCupcakes, alt: "Freshly piped cupcakes" },
   { src: lemonTarts, alt: "Lemon curd tarts" },
   { src: eclairs, alt: "Chocolate eclairs" },
   { src: samoosas, alt: "Golden crispy samoosas" },
   { src: pies, alt: "Golden homemade savoury pies" },
-  { src: savouryPlatterAsset.url, alt: "Assorted savoury platter" },
-  { src: miniPizzasAsset.url, alt: "Freshly prepared mini pizzas" },
-  { src: savouryRoundPlatterAsset.url, alt: "Savoury platter with spring rolls and mini pizzas" },
+  { src: savouryPlatterAsset, alt: "Assorted savoury platter" },
+  { src: miniPizzasAsset, alt: "Freshly prepared mini pizzas" },
+  { src: savouryRoundPlatterAsset, alt: "Savoury platter with spring rolls and mini pizzas" },
 ];
 
 function Hero() {
@@ -90,7 +90,7 @@ function MenuChoices() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           <article className="menu-card">
-            <img src={sweetAsset.url} alt="Pink mixer decorated with flowers and cupcakes" className="h-72 w-full object-cover object-center" />
+            <img src={sweetAsset} alt="Pink mixer decorated with flowers and cupcakes" className="h-72 w-full object-cover object-center" />
             <div className="p-8">
               <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold">Sweet</h3></div>
               <p className="mt-3 text-muted-foreground">Fancy cakes, ganache cakes, cupcakes, bento cakes, cheesecakes and classic desserts.</p>
@@ -98,7 +98,7 @@ function MenuChoices() {
             </div>
           </article>
           <article className="menu-card">
-            <img src={savouryAsset.url} alt="Flavour Pantry GQ halaal savoury platter" className="h-72 w-full object-cover object-center" />
+            <img src={savouryAsset} alt="Flavour Pantry GQ halaal savoury platter" className="h-72 w-full object-cover object-center" />
             <div className="p-8">
               <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Croissant className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold">Savoury</h3></div>
               <p className="mt-3 text-muted-foreground">Samoosas, pies, mini pizzas, buns, subs, tramezzini, quiche and more.</p>
@@ -117,7 +117,7 @@ function SpecialPackages() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center"><p className="section-eyebrow">Special Packages</p><h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Celebrate without the fuss</h2></div>
         <div className="grid items-center gap-10 md:grid-cols-2">
-          <img src={matricComboAsset.url} alt="Matric farewell tall cake" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
+          <img src={matricComboAsset} alt="Matric farewell tall cake" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
           <div>
             <p className="section-eyebrow">Matric Farewell</p>
             <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Combo Package — <span className="text-primary">R2850</span></h2>
@@ -127,7 +127,7 @@ function SpecialPackages() {
         </div>
         <div className="mt-16 grid items-center gap-10 md:grid-cols-2">
           <div className="md:order-2">
-            <img src={bentoSpecialAsset.url} alt="Eid bento cake decorated as a lamb" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
+            <img src={bentoSpecialAsset} alt="Eid bento cake decorated as a lamb" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
           </div>
           <div className="md:order-1">
             <p className="section-eyebrow">Eid Special</p>

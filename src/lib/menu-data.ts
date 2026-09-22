@@ -1,12 +1,12 @@
 import bentoCake from "@/assets/bento_cake.jpg";
 import blueCupcakes from "@/assets/blue_cupcakes.jpg";
-import cadburyAsset from "@/assets/cadbury-ganache-clear.jpg.asset.json";
-import cheesecakesAsset from "@/assets/cheesecakes.jpg.asset.json";
-import dessertsAsset from "@/assets/desserts.jpg.asset.json";
-import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg.asset.json";
-import pieAsset from "@/assets/pie-menu.jpg.asset.json";
-import samoosaAsset from "@/assets/samoosa-menu.jpg.asset.json";
-import savouryMenuAsset from "@/assets/savoury-menu.jpg.asset.json";
+import cadburyAsset from "@/assets/cadbury-ganache-clear.jpg";
+import cheesecakesAsset from "@/assets/cheesecakes.jpg";
+import dessertsAsset from "@/assets/desserts.jpg";
+import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg";
+import pieAsset from "@/assets/pie-menu.jpg";
+import samoosaAsset from "@/assets/samoosa-menu.jpg";
+import savouryMenuAsset from "@/assets/savoury-menu.jpg";
 
 export type MenuItem = { name: string; price: string };
 
@@ -22,7 +22,7 @@ export type MenuSection = {
 export const sweetMenu: MenuSection[] = [
   {
     title: "Fancy Cakes Platter",
-    image: fancyCakesAsset.url,
+    image: fancyCakesAsset,
     alt: "Assorted fancy cakes platter",
     description:
       "A beautiful mixed platter — pastry horns, caramel tarts, chocolate eclairs, lemon curd tarts, granadilla & pineapple tarts, lamingtons, milk tarts, vanilla cupcakes and snow balls.",
@@ -33,7 +33,7 @@ export const sweetMenu: MenuSection[] = [
   },
   {
     title: "Cadbury Ganache Cakes",
-    image: cadburyAsset.url,
+    image: cadburyAsset,
     alt: "Cadbury ganache bundt cake",
     items: [
       { name: "Large Cadbury ganache bundt cake", price: "R300" },
@@ -60,7 +60,7 @@ export const sweetMenu: MenuSection[] = [
   },
   {
     title: "Classic Desserts",
-    image: dessertsAsset.url,
+    image: dessertsAsset,
     alt: "Assorted classic dessert cups",
     items: [
       { name: "Peppermint crisp tart", price: "R25 each" },
@@ -70,7 +70,7 @@ export const sweetMenu: MenuSection[] = [
   },
   {
     title: "Cheesecakes",
-    image: cheesecakesAsset.url,
+    image: cheesecakesAsset,
     alt: "Assorted mini cheesecakes",
     items: [
       { name: "Blueberry cheesecake", price: "R30 each" },
@@ -83,7 +83,7 @@ export const sweetMenu: MenuSection[] = [
 export const savouryMenu: MenuSection[] = [
   {
     title: "Samoosas",
-    image: samoosaAsset.url,
+    image: samoosaAsset,
     alt: "Golden crispy samoosas",
     note: "Prices per dozen. Fresh halaal, highest quality ingredients.",
     items: [
@@ -96,7 +96,7 @@ export const savouryMenu: MenuSection[] = [
   },
   {
     title: "Pies",
-    image: pieAsset.url,
+    image: pieAsset,
     alt: "Golden homemade savoury pies",
     items: [
       { name: "Creamy chicken", price: "R75 per dozen" },
@@ -106,7 +106,7 @@ export const savouryMenu: MenuSection[] = [
   },
   {
     title: "Mini Savouries",
-    image: savouryMenuAsset.url,
+    image: savouryMenuAsset,
     alt: "Platter of mini savouries and heat-and-eat favourites",
     items: [
       { name: "Chicken half moons", price: "R50 per dozen" },

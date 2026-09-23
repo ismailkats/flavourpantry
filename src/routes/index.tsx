@@ -10,7 +10,6 @@ import pies from "@/assets/pies.jpg";
 import samoosas from "@/assets/samoosas.jpg";
 import whatsappQr from "@/assets/whatsapp_qr.png";
 import cadburyClearAsset from "@/assets/cadbury-ganache-clear.jpg";
-import bentoSpecialAsset from "@/assets/eid-bento-cake.jpg";
 import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg";
 import matricComboAsset from "@/assets/matric-combo.jpg";
 import miniPizzasAsset from "@/assets/mini-pizzas-gallery.jpg";
@@ -112,29 +111,125 @@ function MenuChoices() {
 }
 
 function SpecialPackages() {
+  const combo1Items = [
+    "3 Dozen Samoosas",
+    "3 Dozen Pies",
+    "2 Dozen Pizzas",
+    "2 Dozen Quiche",
+    "2 Dozen Spring Rolls",
+    "2 Dozen Half-moons",
+  ];
+
+  const combo2Items = [
+    "50 Samoosas",
+    "50 Pies",
+    "50 Pizzas",
+    "50 Quiche",
+    "50 Spring Rolls",
+    "50 Half-moons",
+  ];
+
+  const includes = ["Main Matric Cake", "12 Matching Cupcakes", "100 Fancies"];
+
   return (
     <section className="py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mb-10 text-center"><p className="section-eyebrow">Special Packages</p><h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Celebrate without the fuss</h2></div>
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <img src={matricComboAsset} alt="Matric farewell tall cake" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
-          <div>
-            <p className="section-eyebrow">Matric Farewell</p>
-            <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Combo Package — <span className="text-primary">R2850</span></h2>
-            <p className="mt-4 text-muted-foreground md:text-lg">1 tall cake · 12 cupcakes · 100 fancy cakes · 10 dozen savouries. Everything you need for the big night, baked fresh and beautifully finished.</p>
-            <a href={waLink("Hi Flavour Pantry! I'm interested in the Matric Farewell Combo Package (R2850).")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />Book the Combo</a>
+        <div className="text-center">
+          <p className="section-eyebrow">Matric Celebration Combos</p>
+          <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">
+            Celebration favourites for your matric farewell, graduation or special event.
+          </h2>
+        </div>
+
+        <img
+          src={matricComboAsset}
+          alt="Matric farewell tall cake"
+          className="mx-auto mt-10 h-80 w-full max-w-4xl rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]"
+          loading="lazy"
+        />
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <article className="menu-card flex flex-col overflow-hidden">
+            <div className="bg-blush p-8 text-center">
+              <h3 className="font-display text-2xl font-bold uppercase tracking-wide md:text-3xl">
+                Matric Combo 1
+              </h3>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-primary">
+                Total: 168 Savoury Pieces
+              </p>
+            </div>
+            <div className="flex flex-1 flex-col p-8">
+              <ul className="space-y-3 text-muted-foreground">
+                {combo1Items.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-10 text-center">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Price</p>
+                <p className="font-display text-5xl font-bold text-primary md:text-6xl">R2850</p>
+              </div>
+            </div>
+          </article>
+
+          <article className="menu-card flex flex-col overflow-hidden">
+            <div className="bg-blush p-8 text-center">
+              <h3 className="font-display text-2xl font-bold uppercase tracking-wide md:text-3xl">
+                Matric Combo 2
+              </h3>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-primary">
+                Total: 300 Savoury Pieces
+              </p>
+            </div>
+            <div className="flex flex-1 flex-col p-8">
+              <ul className="space-y-3 text-muted-foreground">
+                {combo2Items.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-10 text-center">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Price</p>
+                <p className="font-display text-5xl font-bold text-primary md:text-6xl">R3500</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-border bg-card p-8 shadow-md md:p-12">
+          <h3 className="font-display text-center text-2xl font-bold uppercase tracking-wide md:text-3xl">
+            Every Combo Includes
+          </h3>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            {includes.map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-2.5 rounded-full bg-blush px-5 py-2.5 text-sm font-semibold text-foreground md:text-base"
+              >
+                <Check className="h-4 w-4 text-primary md:h-5 md:w-5" />
+                {item}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="mt-16 grid items-center gap-10 md:grid-cols-2">
-          <div className="md:order-2">
-            <img src={bentoSpecialAsset} alt="Eid bento cake decorated as a lamb" className="h-80 w-full rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]" loading="lazy" />
-          </div>
-          <div className="md:order-1">
-            <p className="section-eyebrow">Eid Special</p>
-            <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Eid Bento Cake — <span className="text-primary">R250</span></h2>
-            <p className="mt-4 text-muted-foreground md:text-lg">A hand-decorated 5-inch bento cake with your choice of flavour and colours, perfect for Eid gatherings and family visits.</p>
-            <a href={waLink("Hi Flavour Pantry! I'm interested in the Eid Bento Cake Special (R250).")} target="_blank" rel="noreferrer" className="btn-primary mt-8"><MessageCircle className="h-4 w-4" />Order the Eid Bento</a>
-          </div>
+
+        <div className="mt-12 text-center">
+          <a
+            href={waLink("I would like to enquire about your Matric Celebration Combos.")}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary text-sm uppercase tracking-wide md:text-base"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Order Now on WhatsApp
+          </a>
+          <p className="mt-5 text-sm text-muted-foreground">
+            Pre-order required. Please enquire for availability and collection/delivery options.
+          </p>
         </div>
       </div>
     </section>

@@ -297,7 +297,7 @@ function Contact() {
             <div className="mt-6 space-y-4">
               <a href={waLink("Hi Flavour Pantry!")} target="_blank" rel="noreferrer" className="flex items-center gap-3 font-semibold text-primary"><Phone className="h-5 w-5" />081 510 8257</a>
               <a href="mailto:flavourpantrygq@gmail.com" className="flex items-center gap-3 font-semibold text-primary"><Mail className="h-5 w-5" />flavourpantrygq@gmail.com</a>
-              <p className="flex items-center gap-3 text-muted-foreground"><MapPin className="h-5 w-5 text-primary" />Malabar, Port Elizabeth</p>
+              <p className="flex items-center gap-3 text-muted-foreground"><MapPin className="h-5 w-5 text-primary" />Malabar, Gqeberha</p>
             </div>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -315,7 +315,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <main><Hero /><MenuChoices /><SpecialPackages /><Contact /></main>
+      <main><Hero /><WhyChooseUs /><MenuChoices /><SpecialPackages /><Contact /></main>
       <SiteFooter />
     </div>
   );

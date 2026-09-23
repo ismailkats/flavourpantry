@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Cake, Check, Croissant, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Cake, Check, ChefHat, Croissant, Mail, MapPin, MessageCircle, PartyPopper, Phone, ShieldCheck } from "lucide-react";
 
 import blueCupcakes from "@/assets/blue_cupcakes.jpg";
 import eclairs from "@/assets/eclairs.jpg";

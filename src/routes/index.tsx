@@ -53,14 +53,18 @@ function Hero() {
       <img src={heroImg} alt="A spread of cakes, tarts, eclairs, samoosas and pies" className="absolute inset-0 h-full w-full object-cover opacity-15" />
       <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 pt-16 pb-10 text-center md:pt-24">
         <img src={logo} alt="Flavour Pantry GQ logo" className="h-40 w-auto md:h-52" />
-        <p className="font-script mt-6 text-4xl text-primary md:text-5xl">Where sweet meets savoury</p>
-        <h1 className="font-display mt-4 text-3xl leading-tight font-bold md:text-5xl">
-          Home-baked with love in <span className="text-primary">Malabar, Gqeberha</span>
-        </h1>
-        <p className="mt-4 max-w-xl text-muted-foreground md:text-lg">Cakes, desserts and halaal savouries made fresh to order for your family, functions and celebrations.</p>
+        <h1 className="font-display mt-6 text-3xl font-bold tracking-wide uppercase md:text-5xl">Flavour Pantry GQ</h1>
+        <p className="font-script mt-3 text-4xl text-primary md:text-5xl">Where Sweet Meets Savoury</p>
+        <p className="mt-5 max-w-2xl text-sm font-semibold tracking-wide text-foreground uppercase md:text-base">
+          Cakes • Desserts • Halaal Savouries • Celebration Catering
+        </p>
+        <p className="mt-3 text-muted-foreground md:text-lg">Made fresh to order in Malabar, Gqeberha</p>
+        <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold tracking-widest text-primary-foreground uppercase shadow-md md:text-base">
+          <ShieldCheck className="h-5 w-5" />100% Fully Halaal
+        </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="#menus" className="btn-primary"><Cake className="h-4 w-4" />View Our Menus</a>
-          <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-outline"><MessageCircle className="h-4 w-4" />WhatsApp Us</a>
+          <a href="#menus" className="btn-primary uppercase tracking-wide"><Cake className="h-4 w-4" />View Our Menus</a>
+          <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-outline uppercase tracking-wide"><MessageCircle className="h-4 w-4" />Order on WhatsApp</a>
         </div>
         <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-medium text-accent-foreground">
           <Check className="h-3.5 w-3.5 text-primary" />Freshly baked using halaal premium quality ingredients
@@ -79,36 +83,71 @@ function Hero() {
   );
 }
 
+function WhyChooseUs() {
+  const reasons = [
+    { icon: ChefHat, title: "Made Fresh to Order", text: "Every order is baked and prepared fresh for your date — nothing sits on a shelf." },
+    { icon: ShieldCheck, title: "100% Fully Halaal", text: "Prepared with premium quality halaal ingredients, start to finish." },
+    { icon: PartyPopper, title: "Perfect for Celebrations", text: "Cakes, platters and combos for farewells, birthdays and family functions." },
+    { icon: MapPin, title: "Proudly Based in Malabar, Gqeberha", text: "A home kitchen serving our local community, with easy collection in Malabar." },
+  ];
+
+  return (
+    <section className="py-20">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="text-center">
+          <p className="section-eyebrow">Why Choose Flavour Pantry?</p>
+          <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Made with care, every single order</h2>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {reasons.map((reason) => (
+            <div key={reason.title} className="menu-card h-full p-7 text-center">
+              <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent text-primary">
+                <reason.icon className="h-6 w-6" />
+              </span>
+              <h3 className="font-display mt-4 text-lg font-bold">{reason.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{reason.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function MenuChoices() {
   return (
     <section id="menus" className="bg-blush py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
-          <p className="section-eyebrow">Our Menus</p>
+          <p className="section-eyebrow">Our Menu</p>
           <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Pick a side, or take both</h2>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           <article className="menu-card">
             <img src={sweetAsset} alt="Pink mixer decorated with flowers and cupcakes" className="h-72 w-full object-cover object-center" />
             <div className="p-8">
-              <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold">Sweet</h3></div>
-              <p className="mt-3 text-muted-foreground">Fancy cakes, ganache cakes, cupcakes, bento cakes, cheesecakes and classic desserts.</p>
+              <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold uppercase tracking-wide">Sweet Treats</h3></div>
+              <p className="mt-3 text-muted-foreground">Cakes • Cupcakes • Bento Cakes • Cheesecakes • Desserts • Fancies</p>
               <Link to="/sweet" className="btn-primary mt-6">See Sweet Menu</Link>
             </div>
           </article>
           <article className="menu-card">
             <img src={savouryAsset} alt="Flavour Pantry GQ halaal savoury platter" className="h-72 w-full object-cover object-center" />
             <div className="p-8">
-              <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Croissant className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold">Savoury</h3></div>
-              <p className="mt-3 text-muted-foreground">Samoosas, pies, mini pizzas, buns, subs, tramezzini, quiche and more.</p>
+              <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Croissant className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold uppercase tracking-wide">Savoury Favourites</h3></div>
+              <p className="mt-3 text-muted-foreground">Samoosas • Pies • Quiche • Pizza • Wraps • Subs • Platters</p>
               <Link to="/savoury" className="btn-primary mt-6">See Savoury Menu</Link>
             </div>
           </article>
         </div>
+        <p className="mx-auto mt-10 max-w-3xl rounded-2xl border border-border bg-card px-6 py-5 text-center text-sm text-muted-foreground md:text-base">
+          Please enquire in advance for availability. Custom cakes and larger catering orders require advance notice.
+        </p>
       </div>
     </section>
   );
 }
+
 
 function SpecialPackages() {
   const combo1Items = [

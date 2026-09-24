@@ -28,7 +28,7 @@ export const sweetMenu: MenuSection[] = [
       "A beautiful mixed platter — pastry horns, caramel tarts, chocolate eclairs, lemon curd tarts, granadilla & pineapple tarts, lamingtons, milk tarts, vanilla cupcakes and snow balls.",
     items: [
       { name: "Platter of 100", price: "R560" },
-      { name: "Platter of 50", price: "R280" },
+      { name: "Platter of 50", price: "R300" },
     ],
   },
   {
@@ -87,11 +87,11 @@ export const savouryMenu: MenuSection[] = [
     alt: "Golden crispy samoosas",
     note: "Prices per dozen. Fresh halaal, highest quality ingredients.",
     items: [
+      { name: "Potato", price: "R45 per dozen" },
       { name: "Chicken mince", price: "R50 per dozen" },
       { name: "Mutton mince", price: "R55 per dozen" },
-      { name: "Chicken jalapeno", price: "R65 per dozen" },
       { name: "Cheese & corn", price: "R55 per dozen" },
-      { name: "Potato", price: "R45 per dozen" },
+      { name: "Chicken jalapeno", price: "R65 per dozen" },
     ],
   },
   {
@@ -99,9 +99,9 @@ export const savouryMenu: MenuSection[] = [
     image: pieAsset,
     alt: "Golden homemade savoury pies",
     items: [
+      { name: "Sausage roll", price: "R70 per dozen" },
       { name: "Creamy chicken", price: "R75 per dozen" },
       { name: "Pepper steak", price: "R85 per dozen" },
-      { name: "Sausage roll", price: "R65 per dozen" },
     ],
   },
   {
@@ -109,16 +109,16 @@ export const savouryMenu: MenuSection[] = [
     image: savouryMenuAsset,
     alt: "Platter of mini savouries and heat-and-eat favourites",
     items: [
+      { name: "Mini aloo paratha", price: "R45 per dozen" },
       { name: "Chicken half moons", price: "R50 per dozen" },
-      { name: "Chicken spring rolls", price: "R65 per dozen" },
       { name: "Mini chicken pizza", price: "R60 per dozen" },
+      { name: "Chicken spring rolls", price: "R65 per dozen" },
+      { name: "Chicken & mushroom quiche", price: "R70 per dozen" },
       { name: "Mini steak pizza", price: "R70 per dozen" },
       { name: "Chicken buns", price: "R80 per dozen" },
       { name: "Steak buns", price: "R85 per dozen" },
       { name: "Chicken tikka subs", price: "R85 per dozen" },
-      { name: "Mini aloo paratha", price: "R45 per dozen" },
       { name: "Chicken pittas", price: "R85 per dozen" },
-      { name: "Chicken & mushroom quiche", price: "R70 per dozen" },
       { name: "Aamili savoury dip 250ml", price: "R45" },
     ],
   },

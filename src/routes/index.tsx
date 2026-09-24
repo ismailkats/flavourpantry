@@ -315,7 +315,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <main><Hero /><WhyChooseUs /><MenuChoices /><SpecialPackages /><Contact /></main>
+      <main><Hero /><MenuChoices /><SpecialPackages /><Contact /><WhyChooseUs /></main>
       <SiteFooter />
     </div>
   );

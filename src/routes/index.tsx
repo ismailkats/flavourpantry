@@ -122,21 +122,21 @@ function MenuChoices() {
           <p className="section-eyebrow">Our Menu</p>
           <h2 className="font-display mt-2 text-3xl font-bold md:text-4xl">Pick a side, or take both</h2>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-2 gap-3 md:gap-8">
           <article className="menu-card">
-            <img src={sweetAsset} alt="Pink mixer decorated with flowers and cupcakes" className="h-72 w-full object-cover object-center" />
-            <div className="p-8">
-              <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold uppercase tracking-wide">Sweet Treats</h3></div>
-              <p className="mt-3 text-muted-foreground">Cakes • Cupcakes • Bento Cakes • Cheesecakes • Desserts • Fancies</p>
-              <Link to="/sweet" className="btn-primary mt-6">See Sweet Menu</Link>
+            <img src={sweetAsset} alt="Pink mixer decorated with flowers and cupcakes" className="h-36 w-full object-cover object-center sm:h-52 md:h-72" />
+            <div className="p-3 sm:p-5 md:p-8">
+              <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-4 w-4 sm:h-5 sm:w-5" /></span><h3 className="font-display text-base font-bold uppercase tracking-wide sm:text-xl md:text-2xl">Sweet Treats</h3></div>
+              <p className="mt-3 text-xs text-muted-foreground sm:text-sm md:text-base">Cakes • Cupcakes • Bento Cakes • Cheesecakes • Desserts • Fancies</p>
+              <Link to="/sweet" className="btn-primary mt-4 w-full !px-2 text-center text-xs sm:mt-6 sm:!px-5 sm:text-sm md:text-base">See Sweet Menu</Link>
             </div>
           </article>
           <article className="menu-card">
-            <img src={savouryAsset} alt="Flavour Pantry GQ halaal savoury platter" className="h-72 w-full object-cover object-center" />
-            <div className="p-8">
-              <div className="flex items-center gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Croissant className="h-5 w-5" /></span><h3 className="font-display text-2xl font-bold uppercase tracking-wide">Savoury Favourites</h3></div>
-              <p className="mt-3 text-muted-foreground">Samoosas • Pies • Quiche • Pizza • Wraps • Subs • Platters</p>
-              <Link to="/savoury" className="btn-primary mt-6">See Savoury Menu</Link>
+            <img src={savouryAsset} alt="Flavour Pantry GQ halaal savoury platter" className="h-36 w-full object-cover object-center sm:h-52 md:h-72" />
+            <div className="p-3 sm:p-5 md:p-8">
+              <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Croissant className="h-4 w-4 sm:h-5 sm:w-5" /></span><h3 className="font-display text-base font-bold uppercase tracking-wide sm:text-xl md:text-2xl">Savoury Favourites</h3></div>
+              <p className="mt-3 text-xs text-muted-foreground sm:text-sm md:text-base">Samoosas • Pies • Quiche • Pizza • Wraps • Subs • Platters</p>
+              <Link to="/savoury" className="btn-primary mt-4 w-full !px-2 text-center text-xs sm:mt-6 sm:!px-5 sm:text-sm md:text-base">See Savoury Menu</Link>
             </div>
           </article>
         </div>

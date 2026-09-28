@@ -7,7 +7,7 @@ import { orderLink, SiteFooter, SiteHeader } from "@/components/site-shell";
 function MenuCard({ section }: { section: MenuSection }) {
   return (
     <article className="menu-card flex flex-col">
-      <img src={section.image} alt={section.alt} className="h-56 w-full object-cover" loading="lazy" />
+      <img src={section.image} alt={section.alt} width={section.width} height={section.height} className="h-56 w-full object-cover" loading="lazy" decoding="async" />
       <div className="flex flex-1 flex-col p-6">
         <h2 className="font-display text-xl font-bold">{section.title}</h2>
         {section.description && <p className="mt-2 text-sm text-muted-foreground">{section.description}</p>}

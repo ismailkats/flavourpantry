@@ -1,22 +1,23 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cake, Check, ChefHat, Croissant, Mail, MapPin, MessageCircle, PartyPopper, Phone, ShieldCheck } from "lucide-react";
 
-import blueCupcakes from "@/assets/blue_cupcakes.jpg";
-import eclairs from "@/assets/eclairs.jpg";
-import heroImg from "@/assets/hero.jpg";
-import lemonTarts from "@/assets/lemon_tarts.jpg";
-import logo from "@/assets/logo.png";
-import pies from "@/assets/pies.jpg";
-import samoosas from "@/assets/samoosas.jpg";
-import whatsappQr from "@/assets/whatsapp_qr.png";
-import cadburyClearAsset from "@/assets/cadbury-ganache-clear.jpg";
-import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg";
-import matricComboAsset from "@/assets/matric-combo.jpg";
-import miniPizzasAsset from "@/assets/mini-pizzas-gallery.jpg";
-import savouryAsset from "@/assets/savoury.png";
-import savouryPlatterAsset from "@/assets/savoury-platter-gallery.jpg";
-import savouryRoundPlatterAsset from "@/assets/savoury-round-platter-gallery.jpg";
-import sweetAsset from "@/assets/sweet.jpg";
+import blueCupcakes from "@/assets/blue_cupcakes.webp";
+import eclairs from "@/assets/eclairs.webp";
+import heroAvif from "@/assets/hero.avif";
+import heroImg from "@/assets/hero.webp";
+import lemonTarts from "@/assets/lemon_tarts.webp";
+import logo from "@/assets/logo.webp";
+import pies from "@/assets/pies.webp";
+import samoosas from "@/assets/samoosas.webp";
+import whatsappQr from "@/assets/whatsapp_qr.webp";
+import cadburyClearAsset from "@/assets/cadbury-ganache-clear.webp";
+import fancyCakesAsset from "@/assets/fancy-cakes-platter.webp";
+import matricComboAsset from "@/assets/matric-combo.webp";
+import miniPizzasAsset from "@/assets/mini-pizzas-gallery.webp";
+import savouryAsset from "@/assets/savoury.webp";
+import savouryPlatterAsset from "@/assets/savoury-platter-gallery.webp";
+import savouryRoundPlatterAsset from "@/assets/savoury-round-platter-gallery.webp";
+import sweetAsset from "@/assets/sweet.webp";
 import { SiteFooter, SiteHeader, waLink } from "@/components/site-shell";
 
 export const Route = createFileRoute("/")({
@@ -30,29 +31,33 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "preload", as: "image", href: logo, type: "image/webp", fetchPriority: "high" }],
   }),
   component: Index,
 });
 
 const marqueeImages = [
-  { src: fancyCakesAsset, alt: "Assorted fancy cakes platter" },
-  { src: cadburyClearAsset, alt: "Cadbury ganache bundt cake" },
-  { src: blueCupcakes, alt: "Freshly piped cupcakes" },
-  { src: lemonTarts, alt: "Lemon curd tarts" },
-  { src: eclairs, alt: "Chocolate eclairs" },
-  { src: samoosas, alt: "Golden crispy samoosas" },
-  { src: pies, alt: "Golden homemade savoury pies" },
-  { src: savouryPlatterAsset, alt: "Assorted savoury platter" },
-  { src: miniPizzasAsset, alt: "Freshly prepared mini pizzas" },
-  { src: savouryRoundPlatterAsset, alt: "Savoury platter with spring rolls and mini pizzas" },
+  { src: fancyCakesAsset, alt: "Assorted fancy cakes platter", width: 370, height: 259 },
+  { src: cadburyClearAsset, alt: "Cadbury ganache bundt cake", width: 720, height: 742 },
+  { src: blueCupcakes, alt: "Freshly piped cupcakes", width: 391, height: 314 },
+  { src: lemonTarts, alt: "Lemon curd tarts", width: 193, height: 248 },
+  { src: eclairs, alt: "Chocolate eclairs", width: 266, height: 248 },
+  { src: samoosas, alt: "Golden crispy samoosas", width: 1024, height: 1024 },
+  { src: pies, alt: "Golden homemade savoury pies", width: 1024, height: 1024 },
+  { src: savouryPlatterAsset, alt: "Assorted savoury platter", width: 512, height: 640 },
+  { src: miniPizzasAsset, alt: "Freshly prepared mini pizzas", width: 621, height: 907 },
+  { src: savouryRoundPlatterAsset, alt: "Savoury platter with spring rolls and mini pizzas", width: 646, height: 537 },
 ];
 
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <img src={heroImg} alt="A spread of cakes, tarts, eclairs, samoosas and pies" className="absolute inset-0 h-full w-full object-cover opacity-15" />
+      <picture>
+        <source srcSet={heroAvif} type="image/avif" />
+        <img src={heroImg} alt="" width={1920} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-15" fetchPriority="low" />
+      </picture>
       <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 pt-16 pb-10 text-center md:pt-24">
-        <img src={logo} alt="Flavour Pantry GQ logo" className="h-40 w-auto md:h-52" />
+        <img src={logo} alt="Flavour Pantry GQ logo" width={1144} height={709} className="h-40 w-auto md:h-52" fetchPriority="high" />
         <h1 className="font-display mt-6 text-3xl font-bold tracking-wide uppercase md:text-5xl">Flavour Pantry GQ</h1>
         <p className="font-script mt-3 text-4xl text-primary md:text-5xl">Where Sweet Meets Savoury</p>
         <p className="mt-5 max-w-2xl text-sm font-semibold tracking-wide text-foreground uppercase md:text-base">
@@ -74,7 +79,7 @@ function Hero() {
         <div className="overflow-hidden">
           <div className="animate-marquee flex w-max gap-4">
             {[...marqueeImages, ...marqueeImages].map((image, index) => (
-              <img key={`${image.alt}-${index}`} src={image.src} alt={image.alt} className="h-44 w-56 rounded-2xl border border-border object-cover shadow-md md:h-52 md:w-64" loading="lazy" />
+              <img key={`${image.alt}-${index}`} src={image.src} alt={image.alt} width={image.width} height={image.height} className="h-44 w-56 rounded-2xl border border-border object-cover shadow-md md:h-52 md:w-64" loading="lazy" decoding="async" />
             ))}
           </div>
         </div>
@@ -124,7 +129,7 @@ function MenuChoices() {
         </div>
         <div className="mt-12 grid grid-cols-2 gap-3 md:gap-8">
           <article className="menu-card">
-            <img src={sweetAsset} alt="Pink mixer decorated with flowers and cupcakes" className="h-36 w-full object-cover object-center sm:h-52 md:h-72" />
+            <img src={sweetAsset} alt="Pink mixer decorated with flowers and cupcakes" width={736} height={1288} className="h-36 w-full object-cover object-center sm:h-52 md:h-72" loading="lazy" decoding="async" />
             <div className="p-3 sm:p-5 md:p-8">
               <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Cake className="h-4 w-4 sm:h-5 sm:w-5" /></span><h3 className="font-display text-base font-bold uppercase tracking-wide sm:text-xl md:text-2xl">Sweet Treats</h3></div>
               <p className="mt-3 text-xs text-muted-foreground sm:text-sm md:text-base">Cakes • Cupcakes • Bento Cakes • Cheesecakes • Desserts • Fancies</p>
@@ -132,7 +137,7 @@ function MenuChoices() {
             </div>
           </article>
           <article className="menu-card">
-            <img src={savouryAsset} alt="Flavour Pantry GQ halaal savoury platter" className="h-36 w-full object-cover object-center sm:h-52 md:h-72" />
+            <img src={savouryAsset} alt="Flavour Pantry GQ halaal savoury platter" width={1275} height={1233} className="h-36 w-full object-cover object-center sm:h-52 md:h-72" loading="lazy" decoding="async" />
             <div className="p-3 sm:p-5 md:p-8">
               <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3"><span className="rounded-full bg-accent p-2 text-primary"><Croissant className="h-4 w-4 sm:h-5 sm:w-5" /></span><h3 className="font-display text-base font-bold uppercase tracking-wide sm:text-xl md:text-2xl">Savoury Favourites</h3></div>
               <p className="mt-3 text-xs text-muted-foreground sm:text-sm md:text-base">Samoosas • Pies • Quiche • Pizza • Wraps • Subs • Platters</p>
@@ -183,6 +188,8 @@ function SpecialPackages() {
         <img
           src={matricComboAsset}
           alt="Matric farewell tall cake"
+          width={736}
+          height={981}
           className="mx-auto mt-10 h-80 w-full max-w-4xl rounded-2xl border border-border object-cover shadow-lg md:h-[28rem]"
           loading="lazy"
         />
@@ -301,7 +308,7 @@ function Contact() {
             </div>
           </div>
           <div className="flex flex-col items-center text-center">
-            <img src={whatsappQr} alt="WhatsApp QR code — scan to chat with Flavour Pantry GQ" className="h-48 w-48 rounded-2xl border border-border" loading="lazy" />
+            <img src={whatsappQr} alt="WhatsApp QR code — scan to chat with Flavour Pantry GQ" width={512} height={512} className="h-48 w-48 rounded-2xl border border-border" loading="lazy" decoding="async" />
             <p className="mt-4 text-sm text-muted-foreground">Scan to chat with us on WhatsApp.<br />Orders and payments are arranged on WhatsApp for now.</p>
             <a href={waLink("Hi Flavour Pantry! I'd like to place an order.")} target="_blank" rel="noreferrer" className="btn-primary mt-5"><MessageCircle className="h-4 w-4" />Chat with us</a>
           </div>

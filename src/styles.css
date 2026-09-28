@@ -2,6 +2,28 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces-latin.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Great Vibes";
+  src: url("./assets/fonts/great-vibes-latin.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-latin.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400 600;
+  font-style: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

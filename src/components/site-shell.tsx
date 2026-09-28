@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Menu, MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 export const WHATSAPP = "https://wa.me/27815108257";
 export const waLink = (text: string) => `${WHATSAPP}?text=${encodeURIComponent(text)}`;
@@ -23,7 +23,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link to="/" aria-label="Flavour Pantry GQ home">
-          <img src={logo} alt="Flavour Pantry GQ logo" className="h-12 w-auto" />
+          <img src={logo} alt="Flavour Pantry GQ logo" width={1144} height={709} className="h-12 w-auto" />
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
@@ -101,7 +101,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-background py-8 pb-24">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-center">
         <Link to="/" aria-label="Flavour Pantry GQ home">
-          <img src={logo} alt="Flavour Pantry GQ logo" className="h-14 w-auto" />
+          <img src={logo} alt="Flavour Pantry GQ logo" width={1144} height={709} className="h-14 w-auto" loading="lazy" />
         </Link>
         <p className="text-sm text-muted-foreground">Where sweet meets savoury · Malabar, Gqeberha</p>
         <p className="max-w-lg text-sm font-medium text-foreground">Like and follow us on our social media platforms for our latest menus and specials.</p>

@@ -1,18 +1,20 @@
-import bentoCake from "@/assets/bento_cake.jpg";
-import blueCupcakes from "@/assets/blue_cupcakes.jpg";
-import cadburyAsset from "@/assets/cadbury-ganache-clear.jpg";
-import cheesecakesAsset from "@/assets/cheesecakes.jpg";
-import dessertsAsset from "@/assets/desserts.jpg";
-import fancyCakesAsset from "@/assets/fancy-cakes-platter.jpg";
-import pieAsset from "@/assets/pie-menu.jpg";
-import samoosaAsset from "@/assets/samoosa-menu.jpg";
-import savouryMenuAsset from "@/assets/savoury-menu.jpg";
+import bentoCake from "@/assets/bento_cake.webp";
+import blueCupcakes from "@/assets/blue_cupcakes.webp";
+import cadburyAsset from "@/assets/cadbury-ganache-clear.webp";
+import cheesecakesAsset from "@/assets/cheesecakes.webp";
+import dessertsAsset from "@/assets/desserts.webp";
+import fancyCakesAsset from "@/assets/fancy-cakes-platter.webp";
+import pieAsset from "@/assets/pie-menu.webp";
+import samoosaAsset from "@/assets/samoosa-menu.webp";
+import savouryMenuAsset from "@/assets/savoury-menu.webp";
 
 export type MenuItem = { name: string; price: string };
 
 export type MenuSection = {
   title: string;
   image: string;
+  width: number;
+  height: number;
   alt: string;
   description?: string;
   note?: string;
@@ -23,6 +25,8 @@ export const sweetMenu: MenuSection[] = [
   {
     title: "Fancy Cakes Platter",
     image: fancyCakesAsset,
+    width: 370,
+    height: 259,
     alt: "Assorted fancy cakes platter",
     description:
       "A beautiful mixed platter — pastry horns, caramel tarts, chocolate eclairs, lemon curd tarts, granadilla & pineapple tarts, lamingtons, milk tarts, vanilla cupcakes and snow balls.",
@@ -34,6 +38,8 @@ export const sweetMenu: MenuSection[] = [
   {
     title: "Cadbury Ganache Cakes",
     image: cadburyAsset,
+    width: 720,
+    height: 742,
     alt: "Cadbury ganache bundt cake",
     items: [
       { name: "Large Cadbury ganache bundt cake", price: "R300" },
@@ -43,6 +49,8 @@ export const sweetMenu: MenuSection[] = [
   {
     title: "Cupcakes",
     image: blueCupcakes,
+    width: 391,
+    height: 314,
     alt: "Freshly piped cupcakes",
     items: [
       { name: "Carrot cupcakes with cream cheese", price: "R150 per dozen" },
@@ -53,6 +61,8 @@ export const sweetMenu: MenuSection[] = [
   {
     title: "Bento Cake",
     image: bentoCake,
+    width: 477,
+    height: 593,
     alt: "5 inch bento cake with buttercream rosettes",
     description:
       "5 inch bento cake — perfect for Eid gatherings, family visits and sweet moments of celebration.",
@@ -61,6 +71,8 @@ export const sweetMenu: MenuSection[] = [
   {
     title: "Classic Desserts",
     image: dessertsAsset,
+    width: 720,
+    height: 542,
     alt: "Assorted classic dessert cups",
     items: [
       { name: "Peppermint crisp tart", price: "R25 each" },
@@ -71,6 +83,8 @@ export const sweetMenu: MenuSection[] = [
   {
     title: "Cheesecakes",
     image: cheesecakesAsset,
+    width: 736,
+    height: 948,
     alt: "Assorted mini cheesecakes",
     items: [
       { name: "Blueberry cheesecake", price: "R30 each" },
@@ -84,6 +98,8 @@ export const savouryMenu: MenuSection[] = [
   {
     title: "Samoosas",
     image: samoosaAsset,
+    width: 660,
+    height: 530,
     alt: "Golden crispy samoosas",
     note: "Prices per dozen. Fresh halaal, highest quality ingredients.",
     items: [
@@ -97,6 +113,8 @@ export const savouryMenu: MenuSection[] = [
   {
     title: "Pies",
     image: pieAsset,
+    width: 712,
+    height: 404,
     alt: "Golden homemade savoury pies",
     items: [
       { name: "Sausage roll", price: "R70 per dozen" },
@@ -107,6 +125,8 @@ export const savouryMenu: MenuSection[] = [
   {
     title: "Mini Savouries",
     image: savouryMenuAsset,
+    width: 646,
+    height: 537,
     alt: "Platter of mini savouries and heat-and-eat favourites",
     items: [
       { name: "Mini aloo paratha", price: "R45 per dozen" },

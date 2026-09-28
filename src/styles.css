@@ -2,6 +2,49 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces-500.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces-600.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces-700.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Great Vibes";
+  src: url("./assets/fonts/great-vibes-400.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-400.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-500.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-600.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 600;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
